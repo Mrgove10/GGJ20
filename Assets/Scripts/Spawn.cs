@@ -16,7 +16,7 @@ public class Spawn : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start()    
     {
         var originalPos = spawnPoint.transform.position;
         for (int i = 0; i < number; i++)
