@@ -1,11 +1,17 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 
 public class UI : MonoBehaviour
 {
+    [Header("general")]
+    public TMP_Text ScoreText;
+    
+    [Header("end")]
     public GameObject GameUI;
     public GameObject EndGameUI;
     public GameObject VictoryUI;
@@ -17,7 +23,7 @@ public class UI : MonoBehaviour
     {
         GoToMainMenuButton.onClick.AddListener(GTMMBOC);
     }
-
+    
     private void GTMMBOC()
     {
         SceneManager.LoadSceneAsync("MainMenu");

@@ -13,15 +13,18 @@ public class Mouvement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
+    void FixedUpdate()
+    {    
+        var t = transform;
         if (Input.GetKey(KeyCode.UpArrow))
         {
+          //  rb.MovePosition(t.position + t.right * (mouvementSpeed * Time.fixedTime));
             rb.velocity = transform.right * mouvementSpeed;
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
+          //  rb.MovePosition(t.position + -t.right * (mouvementSpeed * Time.fixedTime));
             rb.velocity = -transform.right * mouvementSpeed;
         }
 

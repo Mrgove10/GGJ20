@@ -3,6 +3,7 @@ using UnityEngine;
 public class Main_Manager : MonoBehaviour
 {
     public int health = 100;
+    public int score;
     public UI UIManager;
 
     private void Update()
@@ -12,6 +13,8 @@ public class Main_Manager : MonoBehaviour
             Debug.Log("gameover");
             UIManager.Lost();
         }
+
+        UIManager.ScoreText.text = score.ToString();
     }
 
     public void finishedGame()

@@ -7,22 +7,22 @@ public class VIP : MonoBehaviour
     public Material Carmaterial;
     public Light CarLight1;
     public Light CarLight2;
-
+    Color c = new Color(0, 0, 0,255);
     private void Update()
     {
         var h = _mainManager.health;
-        var c = new Color(0, 0, 0);
-        if (h > 66.6)
+
+        if (h >= 67)
         {
-            c = new Color(0, 200, 0);
+            c = new Color(0, 200, 0,255);
         }
-        else if (h > 33.3)
+        else if (h >= 34)
         {
-            c = new Color(252, 186, 3);
+            c = new Color(252, 186, 3,255);
         }
         else
         {
-            c = new Color(200, 0, 0);
+            c = new Color(200, 0, 0,255);
         }
 
         Carmaterial.color = c;
